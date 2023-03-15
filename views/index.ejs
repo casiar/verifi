@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifie</title>
+    <link href="/public/css/styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <h1 class="text-2xl font-bold mb-4">Welcome to Verifie</h1>
+        <form id="username-form" class="bg-white p-4 rounded shadow">
+            <label for="username" class="block mb-2">Username:</label>
+            <div class="flex items-center">
+                <input type="text" name="username" id="username" required class="border-2 border-gray-300 p-2 flex-grow mr-2">
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Submit</button>
+            </div>
+        </form>
+        <div id="signin-popup" style="display: none;" class="mt-4">
+            <h2 class="text-xl font-semibold mb-2">This username is not verified. Want to verfie this username?</h2>
+            <a href="/auth/google" class="bg-red-500 text-white px-4 py-2 rounded mr-2">Google</a>
+            <a href="/auth/facebook" class="bg-blue-600 text-white px-4 py-2 rounded mr-2">Facebook</a>
+            <a href="/auth/twitter" class="bg-blue-400 text-white px-4 py-2 rounded">Twitter</a>
+        </div>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+</html>
